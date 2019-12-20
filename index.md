@@ -1,37 +1,70 @@
-## Welcome to GitHub Pages
+---
+title: 关于我
+layout: about
+---
 
-You can use the [editor on GitHub](https://github.com/Luo-bright/Luo-bright-resume.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+# 个人简历
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 联系方式
+- 手机：17665223859
+- Email：1328653387@qq.com
+- QQ / 微信号：1328653387
 
-### Markdown
+## 基本信息
+ - 罗亮 / 男 / 25岁 (1995年生) 
+ - 专科 / 江西环境工程职业学院（物联网应用技术） 
+ - 工作年限：2.5年
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## 求职意向
+- 无
+<!--
+; - 期望职位：web前端
+; - 期望薪资：税前月薪10k~13k
+; - 期望城市：深圳
+-->
 
-# Header 1
-## Header 2
-### Header 3
+## 工作经历
 
-- Bulleted
-- List
+### 深圳市银兴科技有限公司（ 2018 年6月 ~ 至今 ）
 
-1. Numbered
-2. List
+#### 新能源管理运营系统
+主要负责前端
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### 新能源管理企业管理系统
 
-### Jekyll Themes
+（每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Luo-bright/Luo-bright-resume.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### 深圳市今日电器有限公司 （ 2017 年11月 ~ 2018 年6月 ）
 
-### Support or Contact
+#### Firmoo.com
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+
+#### 内部邮件服务系统
+
+
+#### 其他项目
+
+（每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）
+
+
+​    
+## 技能清单
+
+熟练使用的技能
+
+- HTML，CSS
+- JS（ES6）
+- 微信小程序
+- vue，jQuery
+- elementUI
+
+## 致谢
+
+感谢您花时间阅读我的简历，期待能有机会和您共事。
+
+
+
