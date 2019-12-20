@@ -3,7 +3,7 @@ title: 关于我
 layout: about
 ---
 
-# 个人简历
+# <center>个人简历</center>
 
 ## 联系方式
 - 手机：17665223859
