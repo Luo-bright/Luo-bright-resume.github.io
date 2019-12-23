@@ -7,7 +7,7 @@ layout: about
 
 ## 联系方式
 - 手机：17665223859
-- Email：1328653387@qq.com
+- Email：luosir951130@gmail.com
 - QQ / 微信号：1328653387
 
 ## 基本信息
@@ -61,6 +61,8 @@ layout: about
 - 微信小程序
 - vue，jQuery
 - elementUI
+
+
 
 ## 致谢
 
