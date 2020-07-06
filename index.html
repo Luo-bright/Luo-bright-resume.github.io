@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>capture screen</title>
+<meta charset="UTF-8">
+<title>capture screen</title>
 </head>
 <body>
-<video id="video" controls="controls">
-  <source src="blob:https://baike.baidu.com/1d082121-25fa-4870-a3cd-ee84af9fe7d0">
-</video>
-<p>我是第一帧</p>
-<div id="output"></div>
+    <video id="video" controls="controls">
+        <source src="blob:https://baike.baidu.com/a88fa209-a3cd-4d91-804e-5bb072dfcd6a">
+    </video>
+    <div id="output"></div>
 <script type="text/javascript">
-  (function(){
-    var video, output, img;
+
+(function(){
+
+    var video, output;
     var scale = 0.8;
+
     var initialize = function() {
-      output = document.getElementById("output");
-      video = document.getElementById("video");
-      video.addEventListener('loadeddata',captureImage);
+        output = document.getElementById("output");
+        video = document.getElementById("video");
+        video.addEventListener('loadeddata',captureImage);
     };
-
+ 
     var captureImage = function() {
-      var canvas = document.createElement("canvas");
-      canvas.width = video.videoWidth * scale;
-      canvas.height = video.videoHeight * scale;
-      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-      
-      img = document.createElement("img");
-      img.src = canvas.toDataURL("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594011745625&di=1b8caab4d86a8a7c575bef2750c37417&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg", 1.0);
-      output.appendChild(img);
+        var canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth * scale;
+        canvas.height = video.videoHeight * scale;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+ 
+        var img = document.createElement("img");
+        img.src = canvas.toDataURL("image/png");
+        output.appendChild(img);
     };
-
-    document.getElementById('video').setAttribute('poster','https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594011745625&di=1b8caab4d86a8a7c575bef2750c37417&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg') //设置任意图片第一帧
-    // document.getElementById('video').setAttribute('poster',img.src) //设置视频第一帧
-
+ 
     initialize();
-  })();
+})();
 </script>
 </body>
 </html>
