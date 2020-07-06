@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>capture screen</title>
+  <meta charset="UTF-8">
+  <title>capture screen</title>
 </head>
 <body>
 <video id="video" controls="controls">
-<source src="https://vdept.bdstatic.com/316c4c5432593652686a645171394c34/514d76416e326e54/e5248f86053e946d69e25fbc2e1cd665fb85b5d5f01084aade38f95850b4a9c1cfc0757c522ad90899a69ccdd6c086b25bf0ee549e3d9f6435085d4d34e376e0.mp4?auth_key=1594007936-0-0-8aeffaa846fa7d5d731ac6de963ed842">
+  <source src="blob:https://baike.baidu.com/1d082121-25fa-4870-a3cd-ee84af9fe7d0">
 </video>
+<p>我是第一帧</p>
 <div id="output"></div>
 <script type="text/javascript">
-(function(){
-var video, output;
-var scale = 0.8;
-var initialize = function() {
-output = document.getElementById("output");
-video = document.getElementById("video");
-video.addEventListener('loadeddata',captureImage);
-};
- 
-var captureImage = function() {
-            var canvas = document.createElement("canvas");
-            canvas.width = video.videoWidth * scale;
-            canvas.height = video.videoHeight * scale;
-            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
- 
-            var img = document.createElement("img");
-            img.src = canvas.toDataURL("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.iplaysoft.com%2Ffree-images.html&psig=AOvVaw3XLXQKgXMvsi_3Edi7D0aQ&ust=1594086938337000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPiSgODCt-oCFQAAAAAdAAAAABAI");
-            output.appendChild(img);
-};
- 
-initialize();
-})();
+  (function(){
+    var video, output, img;
+    var scale = 0.8;
+    var initialize = function() {
+      output = document.getElementById("output");
+      video = document.getElementById("video");
+      video.addEventListener('loadeddata',captureImage);
+    };
+
+    var captureImage = function() {
+      var canvas = document.createElement("canvas");
+      canvas.width = video.videoWidth * scale;
+      canvas.height = video.videoHeight * scale;
+      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+      
+      img = document.createElement("img");
+      img.src = canvas.toDataURL("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594011745625&di=1b8caab4d86a8a7c575bef2750c37417&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg", 1.0);
+      output.appendChild(img);
+    };
+
+    document.getElementById('video').setAttribute('poster','https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594011745625&di=1b8caab4d86a8a7c575bef2750c37417&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg') //设置任意图片第一帧
+    // document.getElementById('video').setAttribute('poster',img.src) //设置视频第一帧
+
+    initialize();
+  })();
 </script>
 </body>
 </html>
