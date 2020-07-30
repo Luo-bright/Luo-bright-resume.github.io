@@ -5,38 +5,23 @@
 <title>capture screen</title>
 </head>
 <body>
-
-<video width="100%" height="100%" controls="controls" poster="https://img-blog.csdn.net/2018100916242964?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTY0MTU4MQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" style="object-fit:cover">
-    <source src="https://vd3.bdstatic.com/mda-kfrj9dan1sq1d69b/mda-kfrj9dan1sq1d69b.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D">
- 	你的浏览器不支持HTML5视频。
-</video>
-    <div id="output"></div>
+<div class="copy-font">
+    <div class="uuid-code" id="content">saidfh3is21111h</div>
+    <button class="btn-copy" id="copyBT">复制</button>
+</div>
 <script type="text/javascript">
+function copyArticle(event) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('content'));
 
-(function(){
+        const selection = window.getSelection();
+        if(selection.rangeCount > 0) selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        alert("复制成功！");
+    }
 
-    var video, output;
-    var scale = 0.8;
-
-    var initialize = function() {
-        output = document.getElementById("output");
-        video = document.getElementById("video");
-        video.addEventListener('loadeddata',captureImage);
-    };
- 
-    var captureImage = function() {
-        var canvas = document.createElement("canvas");
-        canvas.width = video.videoWidth * scale;
-        canvas.height = video.videoHeight * scale;
-        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
- 
-        var img = document.createElement("img");
-        img.src = canvas.toDataURL("image/png");
-        output.appendChild(img);
-    };
- 
-    initialize();
-})();
+    document.getElementById('copyBT').addEventListener('click', copyArticle, false);
 </script>
 </body>
 </html>
